@@ -13,7 +13,8 @@ class MCPToolsController(IToolsController):
 
     stream = "streamable-http"
     sse = "sse"
-    _mcp_app = _mcp.http_app(path="/v1", transport="sse")
+    _mcp_sse_app = _mcp.http_app(path="/v1", transport="sse")
+
     """
     This class is a placeholder for MCP tools controller.
     You can implement methods to handle MCP requests here.

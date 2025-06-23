@@ -20,7 +20,7 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
-    lifespan=mcp_controller._mcp_app.lifespan,
+    lifespan=mcp_controller._mcp_sse_app.lifespan,
 )
 
 # 2. Wire up your DB
@@ -39,7 +39,7 @@ app.include_router(static_routes, tags=["static"])
 mcp_router = mcp_controller()
 
 mcp_router._mcp.tool(mcp_router.sentiment_analysis)
-app.mount("/mcp", mcp_router._mcp_app, name="mcp") # mcp endpoint path /mcp/v1
+app.mount("/mcp/sse", mcp_router._mcp_sse_app, name="mcp") # mcp endpoint path /mcp/v1
 
 
 # 4. Check your drivers early
