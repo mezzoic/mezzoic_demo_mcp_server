@@ -33,3 +33,7 @@ dev = [
   "flake8>=6.0.0,<7.0",
   "mypy>=1.0.0,<2.0",
 ]
+[tool.setuptools]
+# instead of auto-discovery, enumerate them
+packages = ["app", "client"]
+
