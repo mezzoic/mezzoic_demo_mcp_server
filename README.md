@@ -150,10 +150,10 @@ Use this template to bootstrap services, APIs, command-line tools, or any domain
 
 | Variable       | Description                       | Default |
 | -------------- | --------------------------------- | ------- |
-| `DATABASE_URL` | Database connection string        |         |
-| `LOG_LEVEL`    | Logging level (DEBUG, INFO, etc.) | INFO    |
-| `PORT`         | Application port                  | 8000    |
-
+| `DB_SERVER`    | Database server uri               |         |
+| `DB_NAME`      | database name                     |         |  
+| `DB_USER`      | database user with permissions    |         |
+| `DB_PASSWORD`  | user password                     |         |
 ---
 
 ## Testing
@@ -168,17 +168,6 @@ Coverage report will be output under `coverage/`.
 
 ---
 
-## Linting & Formatting
-
-- **Black** for code formatting
-- **Flake8** for linting
-
-```bash
-black .
-flake8
-```
-
----
 
 ## Docker Support
 
