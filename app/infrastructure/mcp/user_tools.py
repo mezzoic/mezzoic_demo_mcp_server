@@ -3,7 +3,6 @@ from app.config.settings import get_settings
 from app.interfaces.mcp.tools_handlers import IToolsController
 import json
 from textblob import TextBlob
-from starlette.requests import Request
 from starlette.responses import PlainTextResponse
 
 settings = get_settings()
