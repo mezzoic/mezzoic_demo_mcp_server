@@ -6,6 +6,8 @@ class Settings(BaseSettings):
     ENV: str = "dev"
     DEBUG: bool = True
     IS_PROD: bool = False
+    NAME: str = "Demo App"
+    VERSION: str = "0.1.0"
 
     DB_SERVER: str
     DB_NAME: str

@@ -42,7 +42,7 @@ class UserRouter(IUserController):
             logger.error(f"Error retrieving user with ID {user_id}", exc_info=True)
             raise HTTPException(status_code=500, detail=STD_ERROR)
     
-    def _register_routes(self):
+    def register_routes(self):
         @self._app.get("/users/{user_id}", response_model=User)
         def route_get_user(user_id: int):
             return self.get_by_id(user_id)

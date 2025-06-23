@@ -1,9 +1,8 @@
 from typing import Optional
-from pydantic import BaseModel, field_validator, model_validator
+from pydantic import BaseModel, field_validator, model_validator # type: ignore
 from app.domain.entity import Entity
 
 class User( Entity, BaseModel):
-    id: Optional[int] = None
     name: Optional[str]
     email: str
         
