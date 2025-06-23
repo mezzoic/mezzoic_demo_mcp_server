@@ -32,6 +32,47 @@ For more information about Mezzoic, visit the website: https://mezzoic.com/
 ---
 
 ## Project Overview
+💡 Why MCP?
+As AI copilots like Claude Desktop, Cursor, and ChatGPT become more capable, enterprises face a growing need to let these tools interact with internal systems — not just passively consume knowledge, but take meaningful, assistive action.
+
+That’s where Model-Controller-Presenter (MCP) shines.
+
+MCP provides a clean separation between:
+
+Interface (e.g. GenAI prompts, UI, CLI)
+
+Business logic (application rules, workflows, validation)
+
+Execution layer (APIs, services, databases, external systems)
+
+This pattern makes it safe and scalable to embed GenAI inside real enterprise workflows — without breaking trust, compliance, or control.
+
+✨ Real-World Examples:
+Law Firms
+Embed GenAI assistants that can answer legal questions, draft filings, or navigate precedent — all gated through firm-approved workflows and standards.
+
+Pharma / Life Sciences
+Enable AI tools to generate research briefs, flag compliance issues, or summarize regulatory updates — routed through logic that reflects FDA protocols and internal SOPs.
+
+Engineering & Architecture
+Let GenAI propose design changes or surface past blueprints, but only submit or commit those ideas through controlled, role-aware logic layers.
+
+Healthcare
+Allow AI to assist with care recommendations, patient summaries, or policy lookup — with all interactions flowing through HIPAA-compliant, traceable controller logic.
+
+Enterprise Ops
+Support analysts, delivery leads, and managers with AI assistants that integrate directly into resource planning, ticket triage, or estimation systems — all without exposing backends directly.
+
+✅ Why it matters:
+Testable & observable logic
+
+Safety boundaries between AI and core systems
+
+Multi-interface support (AI, web, CLI, Slack, etc.)
+
+Scalable patterns for regulated industries
+
+This repo demonstrates how to implement MCP in a clean, modular way — so your AI tools can safely interact with the real world.
 
 This template provides an opinionated setup for Python applications following Clean Architecture:
 
