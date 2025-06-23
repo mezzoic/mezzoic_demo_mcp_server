@@ -135,7 +135,7 @@ Use this template to bootstrap services, APIs, command-line tools, or any domain
 
 ### Running the Application
 
-- **Locally:**
+- **Server:**
   ```bash
   uvicorn app.main:app --reload
   ```
