@@ -1,9 +1,10 @@
 # Mezzoic Clean Architecture Template
 
 A Python project template implementing Clean Architecture principles, designed for rapid application development with a clear separation of concerns. This template provides a solid starting point for building maintainable, testable, and scalable applications.
+
 ---
 
-# Mezzoic
+# About Mezzoic
 For more information about Mezzoic, visit the website: https://mezzoic.com/
 
 ---
