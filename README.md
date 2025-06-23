@@ -1,4 +1,4 @@
-# Mezzoic Clean Architecture Template
+# Mezzoic Clean Architecture MCP Template
 
 A Python project template implementing Clean Architecture principles, designed for rapid application development with a clear separation of concerns. This template provides a solid starting point for building maintainable, testable, and scalable applications.
 
