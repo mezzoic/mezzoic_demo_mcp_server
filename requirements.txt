@@ -9,6 +9,8 @@ anyio==4.9.0
     #   sse-starlette
     #   starlette
     #   watchfiles
+asyncio==3.4.3
+    # via demo-mcp-server (pyproject.toml)
 authlib==1.6.0
     # via fastmcp
 black==23.12.1
