@@ -58,7 +58,8 @@ Use this template to bootstrap services, APIs, command-line tools, or any domain
 ```
 ┌─────────────────────────┐       ┌───────────────────┐
 │     Presentation        │◀────▶│   Application     │
-│   (FastAPI Controllers) │       │   (Use Cases)     │
+│   (FastAPI Controllers, │       │   (Use Cases)     │
+│    FastMCP Handlers)    │       │                   │
 └─────────────────────────┘       └───────────────────┘
            ▲                                   ▲
            │                                   │
@@ -72,7 +73,7 @@ Use this template to bootstrap services, APIs, command-line tools, or any domain
 - **Application Layer:** Use cases orchestrating domain logic.
 - **Interfaces/Adapters:** Controllers, repositories, and external service clients.
 - **Infrastructure Layer:** DB implementations, external APIs, frameworks.
-
+- **Presentation Layer:** API and MCP endpoints.
 ---
 
 ## Getting Started
@@ -80,35 +81,27 @@ Use this template to bootstrap services, APIs, command-line tools, or any domain
 ### Prerequisites
 
 - Python 3.10 or higher
-- [Poetry](https://python-poetry.org/) or pip
-- Docker & Docker Compose (optional, for containerized setup)
 
 ### Installation
 
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/mezzoic/mezzoic-clean-architecture-template.git
-   cd mezzoic-clean-architecture-template
+   git clone https://https://github.com/mezzoic/demo_mcp_server.git
+   cd demo_mcp_server
    ```
 
-2. **Install dependencies**
+2. **Set up environment**
 
    ```bash
-   poetry install       # or: pip install -r requirements.txt
+   uv venv
+   # Update .venv with your configuration
    ```
 
-3. **Set up environment**
+3. **Install dependencies**
 
    ```bash
-   cp .env.example .env
-   # Update .env with your configuration
-   ```
-
-4. **Initialize the database**
-
-   ```bash
-   alembic upgrade head
+   uv pip install      
    ```
 
 ---
@@ -123,12 +116,16 @@ Use this template to bootstrap services, APIs, command-line tools, or any domain
 |   |     └── persistence  # DB adapters
 │   ├── use_cases          # Application use case implementations
 │   ├── domain             # Core business entities
+|   ├── static             # static files, images, css, favicon
 │   └── interfaces         # Interfaces
-│         ├── controllers  # Api interfaces
-|         └── repositories # Repository Interfaces
+│   |     ├── controllers  # Api interfaces
+|   |     └── repositories # Repository Interfaces
+|   └── main.py            # entry point for the server app
+|   
+├── client
+|     └── client.py        # client for the server app
 ├── tests                  # Unit and integration tests
 ├── pyproject.toml         # Poetry configuration
-├── main.py                # Application entrypoint
 └── README.md
 ```
 
@@ -140,11 +137,13 @@ Use this template to bootstrap services, APIs, command-line tools, or any domain
 
 - **Locally:**
   ```bash
-  uvicorn main:app --reload
+  uvicorn app.main:app --reload
   ```
-- **Docker:**
+
+- **Client:**
   ```bash
-  docker-compose up --build
+  python client/client.py
+
   ```
 
 ### Environment Variables
